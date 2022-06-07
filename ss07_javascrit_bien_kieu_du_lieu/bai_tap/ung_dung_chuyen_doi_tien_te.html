@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td,th {
+            border ;
+            text-align: left ;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<h1>chuyển đổi tiền tệ</h1>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From currency</th>
+        <th>To currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="numbera">
+        </td>
+        <td>
+            <select id="from">
+                <option value="vnd">viet nam</option>
+                <option value="do">usd</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="do">usd</option>
+                <option value="vnd">viet nam</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="convert()" id="num">Convert</button>
+        </td>
+    </tr>
+<span id="resurt"></span>
+</table>
+<script>
+    function convert() {
+        let a = document.getElementById("numbera").value;
+        let to = document.getElementById('to').value;
+        let from = document.getElementById("from").value;
+        if (from == 'vnd' && to == 'do' ){
+            document.getElementById('resurt').innerText = 'ket qua la' + a / 23000;
+        }
+        else if (from == 'do' && to == 'vnd'){
+            document.getElementById("resurt").innerText = "kết quả là" + a * 23000;
+        }
+        else if (from == "do" && to == "do"){
+            document.getElementById("resurt").innerText = "két quả là : " + a;
+        }
+        else if (from == "vnd" && to=="vnd" ){
+            document.getElementById("resurt").innerText = "kết quả là : " + a;
+        }
+    }
+</script>
+</body>
+</html>

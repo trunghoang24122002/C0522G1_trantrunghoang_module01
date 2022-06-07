@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NHẬP ĐIỂM SINH VIÊN</title>
+</head>
+<body>
+<H1>nhập điểm sinh viên</H1>
+<table>
+    <tr>
+        <th>nhập điểm lý</th>
+        <td>
+            <input type="number" id="numbera">
+        </td>
+    </tr>
+    <tr>
+        <th>nhập điểm hóa</th>
+        <td>
+            <input type="number" id="numberb">
+        </td>
+    </tr>
+    <tr>
+        <th>nhập điểm sinh</th>
+        <td>
+            <input type="number" id="numberc">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="sum()" id="sum">sum</button>
+        </td>
+        <td>
+            <button onclick="medium()" id="medium">medium</button>
+        </td>
+        <td>
+            <span id="result"></span>
+        </td>
+    </tr>
+
+
+</table>
+<script>
+    function medium() {
+        let a = document.getElementById("numbera").value;
+
+        let b = document.getElementById("numberb").value;
+
+        let c = document.getElementById("numberc").value;
+
+        let medium =(parseInt(a) + parseInt(b) + parseInt(c))/3;
+        document.getElementById("result").innerText = medium;
+        document.write("ket qua la" + medium)
+    }
+    function sum() {
+        let a = document.getElementById("numbera").value;
+
+        let b = document.getElementById("numberb").value;
+
+        let c = document.getElementById("numberc").value;
+
+        let sum = parseInt(a) + parseInt(b) + parseInt(c);
+
+        document.getElementById("result").innerText= sum;
+
+        document.write("ket qua la " + sum)
+
+
+    }
+
+
+
+
+</script>
+</body>
+</html>

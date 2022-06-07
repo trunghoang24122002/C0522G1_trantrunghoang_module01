@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình tròn</title>
+</head>
+<body>
+<h1>Bài 3 :diện tích hình tròn</h1>
+<table style="border: 1px solid black">
+    <tr>
+        <th>nhập vào bán kính</th>
+        <td>
+            <input type="number" id="numberr">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="on()" id="on">ON</button>
+        </td>
+        <span id="resurt"></span>
+    </tr>
+</table>
+<script>
+    function on() {
+        let r = document.getElementById("numberr").value;
+        let pi = 3.14;
+        let s = parseInt(r) * parseInt(r) * pi ;
+        document.getElementById("resurt").innerText="chu vi hình tròn là" + s;
+    }
+</script>
+</body>
+</html>

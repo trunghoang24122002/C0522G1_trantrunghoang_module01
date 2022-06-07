@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu vi hình tròn</title>
+</head>
+<body>
+<table style="border: 1px solid black">
+    <tr>
+        <h1>Baif4 :chu vi hình tròn</h1>
+    </tr>
+    <tr>
+        <th>nhập bán kính</th>
+        <td>
+            <input type="number" id="numberR">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <button onclick="on()" id="on">ON</button>
+    </td>
+        <td>
+        <span id="resurt"></span>
+        </td>
+    </tr>
+</table>
+<script>
+    function on() {
+        let R = document.getElementById("numberR").value;
+        let pi = 3.14;
+        let C = 2 * parseInt(R) * pi;
+        document.getElementById("resurt").innerText="chu vi hình tròn là" + C;
+    }
+</script>
+</body>
+</html>

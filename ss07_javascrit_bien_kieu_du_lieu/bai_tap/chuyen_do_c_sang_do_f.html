@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển dộ c sang độ f</title>
+</head>
+<body>
+<h1>Bài 2 : chuyển độ c sang độ f</h1>
+<table style="border: 1px solid black" >
+    <tr>
+        <th>nhập số độ  c </th>
+        <td>
+            <input type="number" id="numberc">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="on()" id="on">on</button>
+        </td>
+        <span id="resurt"></span>
+    </tr>
+
+</table>
+<script>
+
+    function on() {
+        let c = document.getElementById("numberc").value ;
+
+        let F = c * 1.8 + 32;
+
+        document.getElementById("resurt").innerText = 'số độ ' + F;
+
+
+
+    }
+</script>
+</body>
+</html>
