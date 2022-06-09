@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác</title>
+</head>
+<body>
+<h1>Bài 9 :  Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác</h1>
+nhập cạnh a <input type="number" id="soA">
+<br>
+<br>
+nhập cạnh b <input type="number" id="soB">
+<br>
+<br>
+nhập cạnh c <input type="number" id="soC">
+<br>
+<br>
+<button onclick="test()" id="on">Kiểm tra</button>
+<span id="resurt"></span>
+<script>
+    function test() {
+        let a = parseInt(document.getElementById("soA").value);
+        let b = parseInt(document.getElementById("soB").value);
+        let c = parseInt(document.getElementById("soC").value);
+        if(a > 0 && b>0 && c > 0  ){
+            alert("a,b,c là ba cạnh của tam giác");
+        }else if(a + b > c){
+            alert("a,b,c là ba cạnh của tam giác");
+        }else if(b + c > a){
+            alert("a,b,c là ba cạnh của tam giác");
+        }
+        else if(a + c > b){
+            alert("a,b,c là ba cạnh của tam giác");
+        }
+        else{
+            alert("a,b,c không là ba cạnh của tam giác");
+        }
+
+    }
+</script>
+</body>
+</html>

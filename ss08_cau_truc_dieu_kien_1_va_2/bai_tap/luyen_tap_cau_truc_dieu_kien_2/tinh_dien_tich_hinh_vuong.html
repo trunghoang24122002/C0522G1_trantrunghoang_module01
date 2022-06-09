@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích hình vuông</title>
+</head>
+<body>
+<h1>Bài 3 : tính diện tích hình vuông khi biết cạnh a</h1>
+nhập cạnh a <input type="number" id="numberA">
+<button onclick="test()" id="on">Kết quả</button>
+<script>
+    function test() {
+        let edgeA = parseInt(document.getElementById("numberA").value);
+        let area = edgeA * edgeA;
+        alert("diện tích hình vuông là " + area);
+
+    }
+</script>
+</body>
+</html>

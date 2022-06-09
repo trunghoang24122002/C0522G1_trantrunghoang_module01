@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giải pguowng trình bậc 2</title>
+</head>
+<body>
+<h1>Bài 7 : Giải phương trình bậc 2</h1>
+nhập số a <input type="number" id="soA">
+<br>
+<br>
+nhập số b <input type="number" id="soB">
+<br>
+<br>
+nhập số c <input type="number" id="soC">
+<br>
+<br>
+<button onclick="test()" id="on">Kết quả</button>
+<span id="resurt"></span>
+<script>
+    function test() {
+        let a = parseInt(document.getElementById("soA").value);
+        let b = parseInt(document.getElementById("soB").value);
+        let c = parseInt(document.getElementById("soC").value);
+        let delta = (b*b) - (4 * a * c);
+        if(delta === 0){
+            let x = -(b / (2 *a));
+            document.getElementById("resurt").innerText="phương trình có nghiệm kép : " + x;
+        }
+        else if(delta > 0){
+            let x1 = - b + (Math.sqrt(delta)) / 2 * a;
+            let x2 = - b - (Math.sqrt(delta)) / 2 * a;
+            document.getElementById("resurt").innerText="phương trình bậc 2 có hai nghiệm : " + "x1 là"+ x1 + ";....;....;"+"x2 là :" + x2 ;
+        }
+else {
+    document.getElementById("resurt").innerText="phương trình vô nghiệm "
+        }
+    }
+</script>
+</body>
+</html>

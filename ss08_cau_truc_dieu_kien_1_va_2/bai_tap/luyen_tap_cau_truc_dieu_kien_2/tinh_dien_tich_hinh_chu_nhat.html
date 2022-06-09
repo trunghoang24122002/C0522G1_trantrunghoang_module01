@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diên tích hình chữ nhật</title>
+</head>
+<body>
+<h1>Bài 4 : Tính diện tích hình chữ nhật khi biết 2 cạnh a và b</h1>
+nhập chiều dài <input type="number" id="numberLongs">
+<br>
+<br>
+nhập chiều rộng <input type="number" id="numberwidth">
+<br>
+<br>
+<button onclick="test()" id="on">Kết quả</button>
+<span id="resurt"></span>
+<script>
+    function test() {
+        let longs = parseInt(document.getElementById("numberLongs").value);
+        let width = parseInt(document.getElementById("numberwidth").value);
+        let area = longs * width;
+        // alert("diện tích hình chữ nhật là :" + area);
+        document.getElementById("resurt").innerText="diện tích hình chữ nhật là : " + area;
+    }
+</script>
+</body>
+</html>

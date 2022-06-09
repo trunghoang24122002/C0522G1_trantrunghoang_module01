@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</title>
+</head>
+<body>
+<h1>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</h1>
+nhập số phút gọi <input type="number" id="phut">
+<br>
+<br>
+<button onclick="test()" id="on">Kiểm tra</button>
+<script>
+    function test() {
+        let minute = parseInt(document.getElementById("phut").value);
+        let fare = minute * 790 ;
+        alert("tiền cước của bạn là" + fare);
+
+    }
+</script>
+</body>
+</html>

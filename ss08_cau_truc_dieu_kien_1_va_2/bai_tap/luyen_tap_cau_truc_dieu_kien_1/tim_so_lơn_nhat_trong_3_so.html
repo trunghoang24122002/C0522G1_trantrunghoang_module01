@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số lớn nhất trong 3 số</title>
+</head>
+<body>
+<h1>tìm số lớn nhất trong 3 số</h1>
+nhập số thứ nhất <input type="number" id="numberInt1">
+<br>
+<br>
+nhập số thứ 2 <input type="number" id="numberInt2">
+<br>
+<br>
+nhập số thứ 3 <input type="number" id="numberInt3">
+<br>
+<br>
+<button onclick="test()" id="on">kiểm tra</button>
+<script>
+    function test() {
+     let numberIntA = parseInt(document.getElementById("numberInt1").value);
+     let numberIntB = parseInt(document.getElementById("numberInt2").value);
+     let numberIntC = parseInt(document.getElementById("numberInt3").value);
+     if ( numberIntA >numberIntB && numberIntA > numberIntC){
+         alert("numberIntA là số lớn nhất");
+     }
+     else if(numberIntA < numberIntB && numberIntB > numberIntC){
+         alert(" numberIntB là số lớn nhất");
+     }
+     else if(numberIntA < numberIntB && numberIntB < numberIntC){
+         alert("numberIntC là số lớn nhất");
+     }
+     else {
+         alert("không có số lớn nhất");
+     }
+    }
+</script>
+</body>
+</html>

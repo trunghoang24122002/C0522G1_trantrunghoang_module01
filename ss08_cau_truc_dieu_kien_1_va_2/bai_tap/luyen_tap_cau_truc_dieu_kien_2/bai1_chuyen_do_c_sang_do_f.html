@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển độ c sang độ f</title>
+</head>
+<body>
+<h1>Bài 1 : chuyển độ c sang độ f</h1>
+nhập độ c <input type="number" id="numberC">
+<button onclick="test()" id="on">chuyển đổi</button>
+<script>
+    function test() {
+        let poison = parseInt(document.getElementById("numberC").value);
+        let degreesF = (poison * (9/5)) + 32;
+        alert("số độ chuyển từ độ c sang độ f là" + degreesF);
+    }
+</script>
+</body>
+</html>

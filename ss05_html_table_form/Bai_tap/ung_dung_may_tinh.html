@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>\
+
+</head>
+<body>
+<table>
+    <tr>
+    <th>Nhập số thứ nhất</th>
+     <th>Nhập số thứ hai</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="number1">
+        </td>
+        <td>
+            <input type="number" id="number2">
+        </td>
+    </tr>
+
+</table>
+<button onclick="addition()">addition</button>
+<button onclick="subtraction()">suptraction</button>
+<button onclick="multiplication()">multiplication</button>
+<button onclick="division()">division</button>
+<span id="resurt"></span>
+<script>
+    function addition(){
+        let numberOne = document.getElementById("number1").value;
+        let numberTwo = document.getElementById("number2").value;
+        let tong = parseInt(numberOne) + parseInt(numberTwo) ;
+        document.getElementById("resurt").innerText="kết quả là: " + tong;
+    }
+    function subtraction() {
+        let numberOne = document.getElementById("number1").value;
+        let numberTwo = document.getElementById("number2").value;
+        let hieu = parseInt(numberOne) - parseInt(numberTwo) ;
+        document.getElementById("resurt").innerText="kết quả là: " + hieu;
+    }
+    function multiplication(){
+        let numberOne = document.getElementById("number1").value;
+        let numberTwo = document.getElementById("number2").value;
+        let tich = parseInt(numberOne) * parseInt(numberTwo) ;
+        document.getElementById("resurt").innerText="kết quả là: " + tich;
+    }
+    function division() {
+        let numberOne = document.getElementById("number1").value;
+        let numberTwo = document.getElementById("number2").value;
+        let thuong = parseInt(numberOne) / parseInt(numberTwo) ;
+        document.getElementById("resurt").innerText="kết quả là: " + thuong;
+    }
+</script>
+</body>
+</html>

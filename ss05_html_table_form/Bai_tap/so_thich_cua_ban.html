@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>FORM ĐĂNG KÝ NGƯỜI DÙNG</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width:40%;
+        }
+        td,th{
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
 <table>
-<!--    <tr>-->
-<!--        <th STYLE="background-color: orangered"; style="text-align: center">SỞ THÍCH CỦA BẠN</th>-->
-<!--    </tr>-->
-    <h1>Sở thích</h1>
     <tr>
-        <td>
-            <label style="color: mediumblue">Họ và tên</label>
+<!--        <th STYLE="background-color: orangered"; style="text-align: center; height: 1px">SỞ THÍCH CỦA BẠN</th>-->
+        <td colspan="2">
+            <h1 style="background-color: orange; text-align: center">Sở thích của bạn</h1>
         </td>
+<!--        <td></td>-->
+    </tr>
+    <tr>
+        <th style="color: blue; text-align: right">Họ và tên</th>
         <td>
             <input type="text" name="Họ và tên">
         </td>
     </tr>
     <tr>
-        <td>
-            <label style="color: mediumblue">Email</label>
-        </td>
+        <th style="color: blue; text-align: right">Sở thích</th>
         <td>
             <input type="email" name="Email">
         </td>
     </tr>
     <tr>
-        <td><label style="color: mediumblue">Sở thích</label></td>
+        <th style="color: blue; text-align: right">Sở thích</th>
         <td>
             <input type="checkbox" name="Thể thao"><label style="color: orangered">Thể thao</label>
             <input type="checkbox" name="Âm nhạc"><label style="color: orangered">Âm nhạc</label>
             <input type="checkbox" name="Đọc sách"><label style="color: orangered">Đọc sách</label>
-            <input type="checkbox" name="Đọc sách">
         </td>
     </tr>
     <tr>
@@ -48,6 +56,7 @@
         <td><input type="checkbox" name="Du lịch"><label style="color: orangered">Du lịch</label></td>
     </tr>
     <tr>
+        <td></td>
         <td>
             <input type="submit" name="Gửi thông tin" value="Gửi thông tin">
             <input type="reset" name="Nhập lại" value="Nhập lại">

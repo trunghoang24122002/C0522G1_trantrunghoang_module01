@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày trong 1 tháng</title>
+</head>
+<body>
+<h1>Tính số ngày trong 1 tháng</h1>
+<!--<form>-->
+    nhập ngày <input type="number" id="numberday">
+    <button onclick="onxxxx()" id="on">Tính số ngày</button>
+    <span id="resurt"></span>
+<!--</form>-->
+<script>
+    function onxxxx() {
+        let day = document.getElementById("numberday").value;
+
+        switch (parseInt(day)) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("resurt").innerText="tháng có 31 ngày :" + day;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("resurt").innerText="tháng có 30 ngày" + day;
+                break;
+            case 2:
+                document.getElementById("resurt").innerText="tháng có 28 || 29 ngày: " + day;
+                break;
+            default:
+                document.getElementById("resurt").innerText="vui lòng nhập lại tháng:";
+        }
+    }
+
+
+</script>
+</body>
+</html>

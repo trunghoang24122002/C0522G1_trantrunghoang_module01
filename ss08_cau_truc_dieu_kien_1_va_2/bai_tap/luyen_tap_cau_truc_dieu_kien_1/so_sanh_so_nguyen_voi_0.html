@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so sánh số nguyên với 0</title>
+</head>
+<body>
+<h1>so sánh số nguyên với 0 </h1>
+nhập vào số nguyên  <input type="number" id="numberInt">
+<button onclick="test()" id="on">kiểm tra</button>
+<script>
+    function test() {
+        let int = document.getElementById("numberInt").value;
+        if (int > 0){
+            alert("số int lớn hơn 0");
+        }
+        else if(int == 0){
+            alert("số int = 0");
+        }
+        else{
+            alert("số int bé hơn 0 ");
+        }
+    }
+</script>
+</body>
+</html>

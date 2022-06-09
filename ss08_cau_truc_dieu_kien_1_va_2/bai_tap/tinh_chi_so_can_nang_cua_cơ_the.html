@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+<form>
+    nhập cân nặng:(kg)<input type="number" id="numberkg"><br>
+    <br>
+    nhập chiều cao:(m)<input type="number" id="numberm">
+</form><br>
+<button onclick="on()" id="on" >Kiểm tra</button>
+<span id="resurt"></span>
+<script>
+    function on() {
+        let height = document.getElementById("numberm").value;
+        let weight = document.getElementById("numberkg").value;
+        let bmi = parseInt(weight) / (parseInt(height) * parseInt(height));
+        document.getElementById("resurt").innerText = "chỉ số cân nặng :" + bmi;
+        if (bmi < 18.5) {
+            document.write("underweight");
+        } else if (18.5 <= bmi < 25.0) {
+            document.write("normal");
+        } else if (25.0 <= bmi < 30.0) {
+            document.write("overweight");
+        } else if (30.0 <= bmi) {
+            document.write("obese");
+        }
+    }
+</script>
+</body>
+</html>

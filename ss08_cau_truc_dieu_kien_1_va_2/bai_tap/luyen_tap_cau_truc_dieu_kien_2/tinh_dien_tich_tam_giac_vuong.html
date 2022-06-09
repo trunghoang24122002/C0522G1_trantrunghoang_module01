@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích tam giác vuông</title>
+</head>
+<body>
+<h1>Bài 5 : Tính diện tích tam giác vuông khi biết 2 cạnh kề</h1>
+nhập cạnh kề a <input type="number" id="numberA">
+<br>
+<br>
+nhập cạnh kề b <input type="number" id="numberB">
+<br>
+<br>
+<button onclick="test()" id="on">Kết quả</button>
+<span id="resurt"></span>
+<script>
+    function test(){
+        let adjacentSideA = parseInt(document.getElementById("numberA").value);
+        let adjacentSidenB = parseInt(document.getElementById("numberB").value);
+        let area = 1/2 * (adjacentSideA * adjacentSidenB);
+        document.getElementById("resurt").innerText="diện tích tam giác vuông là : " + area;
+
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</title>
+</head>
+<body>
+<h1>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h1>
+thu nhập tính thuế <input type="number" id="numberTinhThue">
+<br>
+<br>
+<button onclick="test()" id="on">Kết quả</button>
+<script>
+    function test() {
+        let taxableIncome = parseInt(document.getElementById("numberTinhThue").value);
+        if(taxableIncome === 5000000){
+            let personalIncomeTax = taxableIncome * 5/100;
+            alert("thuế TNCN phải nộp là : " + personalIncomeTax )
+        }else if( taxableIncome >= 5000000 &&  taxableIncome == 10000000){
+            let personalIncomeTaxA = taxableIncome * 10/100;
+            alert("thuế TNCN phải nộp là : "+ personalIncomeTaxA)
+        }else if ( taxableIncome >= 10000000 &&  taxableIncome == 18000000){
+            let  personalIncomeTaxB = taxableIncome * 15/100;
+            alert("thuế TNCN phải nộp là : "+ personalIncomeTaxB)
+        }else if (taxableIncome >= 18000000 && taxableIncome == 32000000){
+            let personalIncomeTaxC = taxableIncome * 20/100;
+            alert("thuế TNCN phsir nộp là : "+ personalIncomeTaxC);
+        }else if (taxableIncome >= 32000000 && taxableIncome == 53000000){
+            let personalIncomeTaxD = taxableIncome * 25/100;
+            alert("thuế TNCN phải nộp là : "+  personalIncomeTaxD );
+        }else if (taxableIncome >= 52000000 && taxableIncome == 80000000){
+            let personalIncomeTaxE = taxableIncome * 30/100;
+            alert("thuế TNCN phải nộp là :"+personalIncomeTaxE);
+        }else if (taxableIncome > 80000000){
+            let personalIncomeTaxH = taxableIncome * 35/100;
+            alert("thuế TNCN phải nộp là :"+personalIncomeTaxH);
+        }else {
+            alert("mời bạn nhập lại số tiền");
+        }
+    }
+</script>
+</body>
+</html>

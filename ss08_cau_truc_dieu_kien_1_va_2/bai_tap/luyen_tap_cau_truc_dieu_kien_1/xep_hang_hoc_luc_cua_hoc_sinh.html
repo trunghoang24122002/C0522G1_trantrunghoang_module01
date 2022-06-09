@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp hạng học lực của học sinh</title>
+</head>
+<body>
+<h1>xếp hạng học lực của học sinh</h1>
+nhập điểm bài kiểm tra <input type="number" id="bkt">
+<br>
+<br>
+nhập điểm thi giữa kỳ <input type="number" id="tgk">
+<br>
+<br>
+nhập điểm thi cuối kỳ <input type="number" id="tck">
+<br>
+<br>
+<button onclick="testt()" id="on">kiểm tra</button>
+<script>
+    function testt() {
+         let test = parseInt(document.getElementById("bkt").value);
+        let midtermExam = parseInt(document.getElementById("tgk").value);
+        let finalExamScore = parseInt(document.getElementById("tck").value);
+        let mediumScore = (test + midtermExam+ finalExamScore)/3;
+        if (mediumScore === 10){
+            alert("bạn là học sinh xuất sắc");
+        }
+        else if (mediumScore >= 8){
+            alert("bạn là học sinh giổi");
+        }
+        else if (mediumScore >= 6.5 && mediumScore < 8){
+            alert("bạn là học sinh khá");
+        }
+        else if (mediumScore > 3.5 && mediumScore == 5){
+            alert("bạn là học sinh trung bình");
+        }
+        else{
+            alert("bạn là học sinh yếu");
+        }
+
+    }
+</script>
+</body>
+</html>

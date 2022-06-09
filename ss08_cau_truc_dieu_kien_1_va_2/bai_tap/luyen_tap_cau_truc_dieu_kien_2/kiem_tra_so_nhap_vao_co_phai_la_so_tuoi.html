@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Kiểm tra xem một số nhập vào có phải là tuổi của một người không</title>
+</head>
+<body>
+<h1>Bài 8 : Kiểm tra xem một số nhập vào có phải là tuổi của một người không</h1>
+nhập số <input type="number" id="so1">
+<br>
+<br>
+<button onclick="test()" id="on">Kiểm tra</button>
+<span id="resurt"></span>
+<script>
+    function test() {
+        let int = document.getElementById("so1").value;
+        if(int < 120 && int > 0){
+            document.getElementById("resurt").innerText="số int nhập vào là số tuổi của một người : " + int;
+        }
+        else {
+            document.getElementById("resurt").innerText="số nhập vào không phải là số tuổi"
+        }
+    }
+</script>
+</body>
+</html>

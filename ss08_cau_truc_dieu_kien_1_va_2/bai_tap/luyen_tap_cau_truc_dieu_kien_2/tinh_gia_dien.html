@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giá điện</title>
+</head>
+<body>
+<h1>Bài 10: Viết chương trình tính giá điện.</h1>
+    lượng điện năng tiêu thụ(kwh) <input type="number" id="numberKwh">
+   <br>
+<br>
+<button onclick="test()" id="on">Kết quả</button>
+<span id="resurt"></span>
+<script>
+    function test() {
+        let kwh = parseInt(document.getElementById("numberKwh").value);
+        if(kwh >= 0 && kwh <= 50){
+            let electricityPriceA = kwh * 1678;
+            document.getElementById("resurt").innerText="tiền điện là : "+ electricityPriceA;
+        }else if(kwh >= 51 && kwh <= 100){
+            let electricityPriceB = kwh * 1734 ;
+            document.getElementById("resurt").innerText="tiền điện là : "+  electricityPriceB;
+        }else  if(kwh >= 101 && kwh <= 200){
+            let electricityPriceC = kwh * 2014;
+            document.getElementById("resurt").innerText="tiền điện là : "+  electricityPriceC
+        }else if(kwh >= 201 && kwh <= 300){
+            let  electricityPriceD = kwh * 2536;
+            document.getElementById("resurt").innerText="tiền điện là : "+  electricityPriceD;
+        }else if(kwh >= 301 && kwh <= 400){
+            let  electricityPriceE = kwh * 2834;
+            document.getElementById("resurt").innerText="tiền điện là : "+ electricityPriceE;
+        }else if (kwh > 401){
+            let  electricityPriceH = kwh *2927;
+            document.getElementById("resurt").innerText="tiền điện là : "+ electricityPriceH;
+        }else {
+            document.getElementById("resurt").innerText="nhập lại số kwh"
+        }
+
+    }
+</script>
+</body>
+</html>

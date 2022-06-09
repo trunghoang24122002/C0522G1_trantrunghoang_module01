@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc nhất</title>
+</head>
+<body>
+<h1>Bài 6 : giải phương trình bậc nhất</h1>
+    nhập vào số a <input type="number" id="soA">
+<br>
+<br>
+nhập vào số b <input type="number" id="soB">
+<br>
+<br>
+<button onclick="test()" id="on">Kết quả</button>
+ <span id="resurt"></span>
+<script>
+    function test() {
+        let a = parseInt(document.getElementById("soA").value);
+        let b = parseInt(document.getElementById("soB").value);
+        let x = -b /a ;
+        if (a != 0 ){
+            document.getElementById("resurt").innerText="phương trình có 1 nghiệm : " + x;
+        }
+        else if(a == 0 && b == 0){
+            document.getElementById("resurt").innerText="phương trình có vô số nghiệm : " + x;
+        }
+        else{
+            document.getElementById("resurt").innerText="phương trình vô nghiêm : " +x;
+        }
+
+    }
+</script>
+</body>
+</html>
