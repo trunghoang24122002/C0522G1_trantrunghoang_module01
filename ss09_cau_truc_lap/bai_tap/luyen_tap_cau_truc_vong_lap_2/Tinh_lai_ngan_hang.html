@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính lãi ngân hàng</title>
+</head>
+<body>
+<h1>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h1>
+nhập số tiền vay <input type="number" id="tienVay">
+<br>
+<br>
+nhập số tháng vay <input type="number" id="thangVay">
+<br>
+<br>
+<button onclick="test()" id="on">Kiểm tra</button><br>
+<span id="resurt"></span><br>
+<span id="resurtA"></span><br>
+<span id="resurtB"></span><br>
+<script>
+    function test(){
+        let loan = parseInt(document.getElementById("tienVay").value);
+        let loanMonth = parseInt(document.getElementById("thangVay").value);
+        let principal = loan / loanMonth;
+        document.getElementById("resurt").innerText="tiền gốc hàng tháng là : "+ principal;
+        let firstMonthsProfit = loan * 0.12/12;
+        document.getElementById("resurtA").innerText="tiền lãi tháng đầu là : "+ firstMonthsProfit ;
+        let interestInTheFollowingMonths = (loan - tiengoc) * 0.12/12;
+        document.getElementById("resurtB").innerText="tiền lãi các tháng tiếp theo là : "+ interestInTheFollowingMonths;
+    }
+</script>
+
+</body>
+</html>
