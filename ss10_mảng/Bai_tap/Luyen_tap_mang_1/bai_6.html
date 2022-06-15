@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương
+        trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn
+        lại in ra "V is not in the array".</title>
+</head>
+<body>
+<script>
+    var numberInt = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var check = false;
+    var v = parseInt(prompt("nhập vào"))
+    for (var i = 0; i < numberInt.length; i++) {
+        if (numberInt[i] === v) {
+            check = true;
+            break;
+        } else {
+            check = false;
+        }
+    }
+    if(check===true){
+        alert("V is in the array " +"tại vị trí "+ i)
+    }else{
+        alert("V is not in the array "+"tại vị trí"+ i )
+    }
+</script>
+</body>
+</html>

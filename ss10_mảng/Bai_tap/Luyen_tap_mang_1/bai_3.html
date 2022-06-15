@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</title>
+</head>
+<body>
+<script>
+    var numberint = [1,2,15,4,7,6,8,10,12,20];
+    var max = 0;
+    var num = 0;
+    var tb;
+    for(var i = 0;i<numberint.length;i++){
+        num += numberint[i]
+        if (numberint[i]>max){
+            max=numberint[i];
+        }
+    }tb = num/numberint.length
+    alert("giá trị lớn nhất trong mảng đó là :"+""+ max + "giá trị tb cacs p tử trong mảng là :"+""+tb)
+</script>
+</body>
+</html>
