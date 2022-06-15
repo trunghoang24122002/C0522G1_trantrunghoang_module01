@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let str = prompt("nhập vào 1 chuỗi:");
+let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let lower = 'abcdefghijklmnopqrstuvwxyz';
+let result1=new Array();
+//cách dùng hàm
+/*for(let i=0; i<str.length; i++)
+{
+if(upper.indexOf(str[i]) !== -1)
+{
+result1.push(str[i].toLowerCase());
+}
+else if(lower.indexOf(str[i]) !== -1)
+{
+result1.push(str[i].toUpperCase());
+}
+else
+{
+result1.push(str[i]);
+}
+}*/
+//console.log(result1.join(''));
+/*document.write(result1.join(''));*/
+//cách dùng lệnh thường
+for(let i=0;i<str.length;i++){
+result1[i]=str[i];
+}
+for (let i=0;i<result1.length;i++ ){
+for(let j=0;j<upper.length;j++){
+if (result1[i]===upper[j]){
+result1[i]=lower[j];
+}else if (result1[i]===lower[j]){
+result1[i]=upper[j];
+}
+}
+}
+document.write("<br>");
+document.write(result1);
+</script>
+</body>
+</html>

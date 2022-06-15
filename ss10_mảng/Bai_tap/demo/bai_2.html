@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn. Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.</title>
+</head>
+<body>
+<script>
+    // var number = [1,2,3,4,5,6,7,8,9]
+    number = parseInt(prompt("nhập vào"))
+    var array=(number)
+    for(var i =0;i<array.length;i++){
+        if(array[i] %2===0 && array[i-1] %2===0){
+            array.push("-",array[i-1]);
+        }else{
+             // array.push(array[i-1]);
+        }
+    }document.write("" + array.push);
+</script>
+</body>
+</html>
