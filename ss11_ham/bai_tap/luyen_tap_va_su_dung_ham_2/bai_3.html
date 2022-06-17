@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<!--*/Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+<script>
+    let factorial = 1;
+
+    function factorialNumber(number) {
+
+        for (let i = 1; i <= number; i++) {
+            factorial = factorial * i;
+        }
+        return factorial
+    }
+
+    let number = parseInt(prompt("nhập số"));
+    var result = factorialNumber(number);
+    alert("kết quả là: " + result)
+</script>
+</body>
+</html>

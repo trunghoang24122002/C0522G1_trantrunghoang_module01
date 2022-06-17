@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8</title>
+</head>
+<body>
+<!--*/Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.-->
+<script>
+    arrayNumber = Array();
+    number = parseInt(prompt("nhập vào chiều dài của mảng"));
+    for (let i = 0; i < number; i++) {
+        arrayNumber[i] = parseInt(prompt("nhập vào phần tử thứ " + i + "của mảng"))
+    }
+    var first = 0;
+    var last = arrayNumber.length - 1
+
+    function reverseAray(arrayNumber) {
+        while (first < last) {
+            let c = arrayNumber[first]
+            arrayNumber[first] = arrayNumber[last];
+            arrayNumber[last] = c
+            first++;
+            last--;
+        }
+        return arrayNumber
+    }
+
+    let a = reverseAray(arrayNumber);
+    document.write("mảng sau khi đảo ngược là: " + "" + a)
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên tố</title>
+</head>
+<!--kiểm tra số nguyên tố-->
+<body>
+<script>
+    var number =parseInt(prompt("nhập vào"));
+    // var count = 0 ;
+    // var divisor = 0;
+    function prime(number) {
+        var divisor = 0 ;
+        for (var i =1;i<=number;i++){
+            if(number %i===0){
+                divisor++
+            }
+        }
+
+        if(divisor===2){
+            alert("số nguyên tố là " +number);
+            // count++
+        }else {
+            alert(+number +""+"không phải là số nguyên tố")
+        }
+    }
+    prime(number);
+
+</script>
+</body>
+</html>

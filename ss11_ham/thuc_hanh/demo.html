@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let number = 2;
+    // Khởi tạo biến count đếm số lượng số nguyên tố
+    let count = 0;
+    while (count < 20) {
+        // Biến đếm ước số.
+        let divisor = 0;
+        for (let i = 1; i <= number; i++) {
+            // Mỗi khi number chia hết cho i thì tăng biến đếm ước lên 1 đơn vị
+            if (number % i === 0) {
+                divisor++;
+            }
+        }
+        // Vì số nguyên tố chỉ chia hết cho 1 và chính nó nên divisor === 2 sẽ là số nguyên tố
+        if (divisor === 2) {
+            document.write(number + "<br>");
+            //Tăng count lên 1 đơn vị.
+            count++
+        }
+        // Biến số sẽ tự động tăng qua mỗi vòng lặp tới khi tìm đủ 20 số nguyên tố
+        number++;
+    }
+</script>
+</body>
+</html>
