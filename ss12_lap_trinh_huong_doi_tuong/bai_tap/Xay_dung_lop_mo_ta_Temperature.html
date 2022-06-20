@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(poison) {
+            this.poison = poison;
+        }
+        convert(){
+            let degreeF = (9/5 * this.poison) + 32;
+            document.write("độ f là : " + degreeF + "<br>")
+        }
+        convert1(){
+            let degreeK = this.poison + 273.15 ;
+            document.write("độ k là : " + degreeK + "<br>");
+        }
+        getPoison(){
+            return this.poison
+        }
+    }
+    let  temperature = new Temperature(25);
+    temperature.getPoison();
+    degreeF = temperature.convert();
+    degreeK = temperature.convert1();
+
+</script>
+</body>
+</html>

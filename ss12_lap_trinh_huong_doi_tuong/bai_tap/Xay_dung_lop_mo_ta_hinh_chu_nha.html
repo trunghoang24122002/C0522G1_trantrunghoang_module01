@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(longs, width) {
+            this.longs = longs;
+            this.width = width;
+        }
+
+        theArea() {
+            let area = this.longs * this.width;
+            document.write("diện tích hình chữ nhật là : " + area + "<br>");
+        }
+
+        calculateTheCircumference() {
+            let perimrter = (this.longs + this.width) * 2;
+            document.write("chu vi hình chữ nhật là : " + perimrter + " <br>");
+        }
+
+        getLongs() {
+            return this.longs;
+        }
+
+        getWidth() {
+            return this.width
+        }
+
+        setLongs(newLongs) {
+            this.longs = newLongs;
+        }
+
+        setWidth(newWidth) {
+            this.width = newWidth;
+        }
+    }
+    let rectangle = new Rectangle(12, 20);
+    rectangle.getLongs();
+     rectangle.getWidth();
+    area = rectangle.theArea();
+    perimrter =  rectangle.calculateTheCircumference();
+    rectangle.setLongs(40);
+    rectangle.setWidth(10);
+    area = rectangle.theArea();
+    perimrter =  rectangle.calculateTheCircumference();
+
+</script>
+</body>
+</html>
