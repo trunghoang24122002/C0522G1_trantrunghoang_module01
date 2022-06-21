@@ -12,7 +12,7 @@
             this.weight = weight;
         }
         getWeight() {
-            return this.weight;//2
+            return this.weight;
         }
 
         setWeight(weight) {
@@ -81,8 +81,8 @@
 
         eat(apple){
             if(apple.getWeight() > 0){
-                apple.decreaseApple(); //1
-                this.weight++; //66
+                apple.decreaseApple();
+                this.weight++;
             }else {
                 alert("Táo đã hết");
             }
