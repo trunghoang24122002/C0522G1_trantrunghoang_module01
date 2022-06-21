@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>công tắc và bóng đèn</title>
+</head>
+<body>
+<!--công tắt và bóng đèn-->
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status
+        }
+
+        turnOn() {
+            this.status = true;
+            document.write("trạng thái bóng đèn : " + this.status + "<br>")
+            return this.status
+        }
+
+        turnOff() {
+            this.status = false;
+            document.write("trạng thái bóng đèn :" + this.status + "<br>")
+            return this.status
+        }
+    }
+
+    class switchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(electricLamp2) {
+            document.write("đã kết nối công tắc với bóng đèn " + "<br>");
+            return this.lamp = electricLamp2;
+        }
+
+        switchOff() {
+            this.status = false;
+            document.write("trạng thái công tắc : " + this.status + "<br>")
+            return this.lamp = false;
+        }
+
+        switchOn() {
+            this.status = true;
+            document.write("trạng thái công tắc : " + this.status + "<br>")
+            return this.lamp = true;
+        }
+    }
+
+    let electricLamp2 = new ElectricLamp(true)
+    let switchButton1 = new switchButton(true, electricLamp2);
+    switchButton1.connectToLamp(electricLamp2);
+    for (let i = 1; i <= 10; i++) {
+        switchButton1.switchOn();
+        electricLamp2.turnOn();
+        document.write("<br>");
+        switchButton1.connectToLamp(electricLamp2);
+        switchButton1.switchOff();
+        electricLamp2.turnOff();
+        document.write("<br>")
+    }
+
+
+</script>
+</body>
+</html>
